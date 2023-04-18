@@ -14,6 +14,8 @@ namespace ariel
     {
         this->numerator = num;
         this->denominator = den;
+        if(this->denominator==0)
+            throw std::invalid_argument("Division by 0");
     }
     int Fraction::getNumerator()
     {
