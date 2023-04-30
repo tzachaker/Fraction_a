@@ -19,32 +19,32 @@ namespace ariel{
             int getDenominator();
 
         // friend global IO operators
-            friend std::ostream& operator<< (std::ostream& output, const Fraction& f);
-            friend std::istream& operator>> (std::istream& input , Fraction& f);
+            friend std::ostream& operator<< (std::ostream& output, const Fraction& frac);
+            friend std::istream& operator>> (std::istream& input , Fraction& frac);
         
-            Fraction operator+(const Fraction& f);
+            Fraction operator+(const Fraction& frac);
             Fraction operator+(double num);
-            friend Fraction operator+(const Fraction& f1, const Fraction& f2);
-            friend Fraction operator+(const Fraction& f, double d);
-            friend Fraction operator+(double d, const Fraction& f);
+            friend Fraction operator+(const Fraction& frac1, const Fraction& frac2);
+            friend Fraction operator+(const Fraction& frac, double num);
+            friend Fraction operator+(double num, const Fraction& frac);
 
-            Fraction operator-(const Fraction& f);
+            Fraction operator-(const Fraction& frac);
             Fraction operator-(double num);
-            friend Fraction operator-(const Fraction& f1, const Fraction& f2);
-            friend Fraction operator-(const Fraction& f, double d);
-            friend Fraction operator-(double d, const Fraction& f);
+            friend Fraction operator-(const Fraction& frac1, const Fraction& frac2);
+            friend Fraction operator-(const Fraction& frac, double num);
+            friend Fraction operator-(double num, const Fraction& frac);
 
-            Fraction operator*(const Fraction& f);
+            Fraction operator*(const Fraction& frac);
             Fraction operator*(double num);
-            friend Fraction operator*(const Fraction& f1, const Fraction& f2);
-            friend Fraction operator*(double d, const Fraction& f);
-            friend Fraction operator*(const Fraction& f, double d);    
+            friend Fraction operator*(const Fraction& frac1, const Fraction& frac2);
+            friend Fraction operator*(double num, const Fraction& frac);
+            friend Fraction operator*(const Fraction& frac, double num);    
 
-            Fraction operator/(const Fraction& f);
+            Fraction operator/(const Fraction& frac);
             Fraction operator/(double num);
-            friend Fraction operator/(const Fraction& f1, const Fraction& f2);
-            friend Fraction operator/(const Fraction& f, double d);
-            friend Fraction operator/(double d, const Fraction& f);
+            friend Fraction operator/(const Fraction& frac1, const Fraction& frac2);
+            friend Fraction operator/(const Fraction& frac, double num);
+            friend Fraction operator/(double num, const Fraction& frac);
 
             // prefix increment:
             Fraction operator++();
@@ -55,20 +55,20 @@ namespace ariel{
             // postfix decrement:
             Fraction operator--(int);
 
-            bool operator>(const Fraction& f);
-            bool operator>(double n);
+            bool operator>(const Fraction& frac);
+            bool operator>(double num);
 
-            bool operator<(const Fraction& f);
-            bool operator<(double n);
+            bool operator<(const Fraction& frac);
+            bool operator<(double num);
 
-            bool operator>=(const Fraction& f);
-            bool operator>=(double n);
+            bool operator>=(const Fraction& frac);
+            bool operator>=(double num);
 
-            bool operator<=(const Fraction& f);
-            bool operator<=(double n);
+            bool operator<=(const Fraction& frac);
+            bool operator<=(double num);
 
-            bool operator==(const Fraction& f);
-            bool operator==(double n);
+            bool operator==(const Fraction& frac);
+            bool operator==(double num);
     };
 }
 #endif
